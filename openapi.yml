@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  title: Redikru Jobs API
+  version: 1.0.0
+paths:
+  /jobs:
+    post:
+      summary: Create job posting
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                companyName:
+                  type: string
+                title:
+                  type: string
+                description:
+                  type: string
+              required: [companyName, title, description]
+      responses:
+        "201":
+          description: Created
+    get:
+      summary: List jobs
+      parameters:
+        - in: query
+          name: keyword
+          schema:
+            type: string
+        - in: query
+          name: companyName
+          schema:
+            type: string
+        - in: query
+          name: limit
+          schema:
+            type: integer
+        - in: query
+          name: offset
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
