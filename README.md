@@ -159,10 +159,6 @@ The application uses a multi-stage Docker build:
 4. Push to branch: `git push origin feature/new-feature`
 5. Submit a pull request
 
-## 📝 License
-
-This project is licensed under the MIT License.
-
 ## 🆘 Troubleshooting
 
 ### Common Issues
